@@ -7,12 +7,11 @@ function TodoItem({ todo, id }) {
     return (
         <li key={todo.index}>
             <span>
-                <input type="checkbox" />
+                <input type="checkbox" onChange={() => console.log(todo.index)} />
                 <strong>{id + 1}</strong>
                 {todo.title}
-                <button>&times;</button>
             </span>
-            
+            <button>&times;</button>
         </li>
     );
 };
